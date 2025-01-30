@@ -121,40 +121,34 @@
         <div class="container">
                 
                 <div class="row">
-                  <div class="col-lg-11 text-center mx-auto col-12">
+                  <div class="col-lg-11 text-center mx-auto col-12 mt-3">
 
-                      <div class="col-lg-8 mx-auto">
+                      <div class="col-lg-8 mx-auto" style="margin-bottom:50px;">
                         <h2>All the projects I've created</h2>
                       </div>
 
                       <div class="owl-carousel owl-theme">
                         <div class="item">
                           <div class="project-info">
-                            <img src="images/project/project-image01.png" class="img-fluid" alt="project image">
+                            <img src="images/project/Screenshot1.png" class="img-fluid" alt="project image">
                           </div>
                         </div>
 
                         <div class="item">
                           <div class="project-info">
-                            <img src="images/project/project-image02.png" class="img-fluid" alt="project image">
+                            <img src="images/project/Screenshot2.png" class="img-fluid" alt="project image">
                           </div>
                         </div>
 
                         <div class="item">
                           <div class="project-info">
-                            <img src="images/project/project-image03.png" class="img-fluid" alt="project image">
+                            <img src="images/project/Screenshot3.png" class="img-fluid" alt="project image">
                           </div>
                         </div>
 
                         <div class="item">
                           <div class="project-info">
-                            <img src="images/project/project-image04.png" class="img-fluid" alt="project image">
-                          </div>
-                        </div>
-
-                        <div class="item">
-                          <div class="project-info">
-                            <img src="images/project/project-image05.png" class="img-fluid" alt="project image">
+                            <img src="images/project/Screenshot4.png" class="img-fluid" alt="project image">
                           </div>
                         </div>
                       </div>
@@ -187,7 +181,7 @@
                             <span>2023</span>
                         </div>
                         <div class="timeline-info">
-                            <h3><span>Programming Logic</span><small>Best Studio</small></h3>
+                            <h3><span>Programming Logic</span></h3>
                             <p>Proin ornare non purus ut rutrum. Nulla facilisi. Aliquam laoreet libero ac pharetra feugiat. Cras ac fermentum nunc, a faucibus nunc.</p>
                             <img src="data:image/png;base64,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" class="popup-image" alt="Project Manager Image">
                         </div>
@@ -198,7 +192,7 @@
                             <span>2024</span>
                         </div>
                         <div class="timeline-info">
-                            <h3><span>Web Development</span><small>Digital Ace</small></h3>
+                            <h3><span>Web Development</span></h3>
                             <p>Fusce rutrum augue id orci rhoncus molestie. Nunc auctor dignissim lacus vel iaculis.</p>
                             <img src="path/to/ux-designer-image.jpg" class="popup-image" alt="UX Designer Image">
                         </div>
@@ -223,10 +217,10 @@
                 <div class="timeline">
                     <div class="timeline-wrapper">
                         <div class="timeline-yr">
-                            <span>2017</span>
+                            <span>1</span>
                         </div>
                         <div class="timeline-info">
-                            <h3><span>Mobile Web</span><small>Master Design</small></h3>
+                            <h3><span>Mobile Web</span></h3>
                             <p>Please tell your friends about Tooplate website. That would be very helpful. We need your support.</p>
                             <img src="path/to/mobile-web-image.jpg" class="popup-image" alt="Mobile Web Image">
                         </div>
@@ -234,10 +228,10 @@
 
                     <div class="timeline-wrapper">
                         <div class="timeline-yr">
-                            <span>2015</span>
+                            <span>2</span>
                         </div>
                         <div class="timeline-info">
-                            <h3><span>Mobile App</span><small>Creative Agency</small></h3>
+                            <h3><span>Mobile App</span></h3>
                             <p><a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a> is a great website to download HTML templates without any login or email.</p>
                             <img src="path/to/user-interfaces-image.jpg" class="popup-image" alt="User  Interfaces Image">
                         </div>
@@ -245,10 +239,10 @@
 
                     <div class="timeline-wrapper">
                         <div class="timeline-yr">
-                            <span>2013</span>
+                            <span>3</span>
                         </div>
                         <div class="timeline-info">
-                            <h3><span>Cyber Security</span><small>New Art School</small></h3>
+                            <h3><span>Cyber Security</span></h3>
                             <p>You can freely use Tooplate's templates for your business or personal sites. You cannot redistribute this template without a permission.</p>
                             <img src="path/to/artwork-design-image.jpg" class="popup-image" alt="Artwork Design Image">
                         </div>
@@ -273,13 +267,11 @@
                 <div class="contact-info-item">
                   <h3 class="mb-3 text-white">Ahmad Lazim</h3>
                   <p class="footer-text mb-0">0812-5237-4308</p>
-                  <p><a href="mailto:hello@company.co">ahmadlazim422@gmail.com</a></p>
+                  <p><a href="mailto:ahmadlazim422@gmail.com">ahmadlazim422@gmail.com</a></p>
                 </div>
 
                 <ul class="social-links">
-                     <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left" title="Dribbble"></a></li>
-                     <li><a href="#" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
-                     <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left" title="Youtube"></a></li>
+                     <li><a href="https://www.instagram.com/ahmdlzm_/" class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
                 </ul>
             </div>
           </div>
