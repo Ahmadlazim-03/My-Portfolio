@@ -10,10 +10,10 @@ export default function Footer() {
             href="/"
             className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-violet-500 mb-2"
           >
-            Portfolio
+            My Portfolio
           </Link>
           <p className="text-muted-foreground text-sm text-center md:text-left">
-            &copy; {new Date().getFullYear()} John Doe. All rights reserved.
+            &copy; {new Date().getFullYear()} Ahmad Lazim. All rights reserved.
           </p>
         </div>
 

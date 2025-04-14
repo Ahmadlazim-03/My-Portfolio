@@ -68,10 +68,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
+            style={{ marginLeft: '20px' }}
             href="/"
             className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-chart-1 z-50"
           >
-            Portfolio
+            My Portfolio
           </Link>
 
           {/* Desktop Navigation */}
@@ -92,7 +93,7 @@ export default function Navbar() {
             </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
+        
           <div className="flex items-center gap-2 md:hidden">
             <ThemeToggle />
             <button
@@ -106,7 +107,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -146,7 +147,7 @@ export default function Navbar() {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </header>
   )
 }

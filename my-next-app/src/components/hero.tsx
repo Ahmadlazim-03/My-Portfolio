@@ -52,7 +52,7 @@ export default function Hero() {
                 }}
                 className="text-4xl md:text-6xl font-bold"
               >
-                John Doe
+                Ahmad Lazim
               </motion.h1>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -80,11 +80,19 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.9 }}
               className="flex space-x-4"
             >
-              <Button asChild className="bg-primary/90 hover:bg-primary shadow-lg shadow-primary/20">
-                <Link href="#contact">
+             <Button
+                asChild
+                className="bg-primary/90 hover:bg-primary shadow-lg shadow-primary/20"
+              >
+                <Link
+                  href="https://wa.me/6281252374308"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Contact Me <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
+
               <Button variant="outline" asChild className="border-primary/20 hover:bg-primary/10">
                 <Link href="#projects">View Projects</Link>
               </Button>
@@ -163,7 +171,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 1.1 }}
               >
                 <Image
-                  src="/placeholder.svg?height=500&width=500"
+                  src="/MyPhoto1.jpg"
                   alt="Profile"
                   width={500}
                   height={500}

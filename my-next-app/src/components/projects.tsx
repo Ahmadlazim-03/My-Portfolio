@@ -10,7 +10,7 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Go Explore App",
     description:
       "A full-featured e-commerce platform with product listings, cart functionality, user authentication, and payment processing.",
     image: "/placeholder.svg?height=400&width=600",
@@ -19,7 +19,7 @@ const projects = [
     githubUrl: "#",
   },
   {
-    title: "Task Management App",
+    title: "Go Orbit App",
     description:
       "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
     image: "/placeholder.svg?height=400&width=600",

@@ -99,7 +99,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-medium">Email</h4>
-                      <p className="text-sm text-muted-foreground">hello@example.com</p>
+                      <p className="text-sm text-muted-foreground">ahmadlazim422@gmail.com</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -117,7 +117,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-medium">Phone</h4>
-                      <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-sm text-muted-foreground">+62 5237 4308</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -135,7 +135,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-medium">Location</h4>
-                      <p className="text-sm text-muted-foreground">San Francisco, CA</p>
+                      <p className="text-sm text-muted-foreground">Jombang, Jawa Timur</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -218,7 +218,7 @@ export default function Contact() {
                         >
                           Name
                         </label>
-                        <Input id="name" placeholder="John Doe" required />
+                        <Input id="name" placeholder="Your Name" required />
                       </div>
                       <div className="space-y-2">
                         <label
@@ -227,7 +227,7 @@ export default function Contact() {
                         >
                           Email
                         </label>
-                        <Input id="email" type="email" placeholder="john@example.com" required />
+                        <Input id="email" type="email" placeholder="Your Email" required />
                       </div>
                     </motion.div>
                     <motion.div
@@ -242,7 +242,7 @@ export default function Contact() {
                       >
                         Subject
                       </label>
-                      <Input id="subject" placeholder="How can I help you?" required />
+                      <Input id="subject" placeholder="How can I help you ?" required />
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
@@ -256,7 +256,7 @@ export default function Contact() {
                       >
                         Message
                       </label>
-                      <Textarea id="message" placeholder="Your message here..." className="min-h-32" required />
+                      <Textarea id="message" placeholder="Your message here" className="min-h-32" required />
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
