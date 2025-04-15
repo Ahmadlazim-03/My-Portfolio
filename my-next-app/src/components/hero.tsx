@@ -106,7 +106,7 @@ export default function Hero() {
             >
               <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                 <Link
-                  href="https://github.com"
+                  href="https://github.com/Ahmadlazim-03/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -117,7 +117,7 @@ export default function Hero() {
               </motion.div>
               <motion.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                 <Link
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/ahmad-lazim-5b8302288/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"

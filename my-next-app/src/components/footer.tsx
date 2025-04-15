@@ -10,7 +10,7 @@ export default function Footer() {
             href="/"
             className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-violet-500 mb-2"
           >
-            My Portfolio
+            My Profile
           </Link>
           <p className="text-muted-foreground text-sm text-center md:text-left">
             &copy; {new Date().getFullYear()} Ahmad Lazim. All rights reserved.
@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-end">
           <div className="flex space-x-4 mb-4">
             <Link
-              href="https://github.com"
+              href="https://github.com/Ahmadlazim-03"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -29,7 +29,7 @@ export default function Footer() {
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ahmad-lazim-5b8302288/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -47,7 +47,7 @@ export default function Footer() {
               <span className="sr-only">Twitter</span>
             </Link>
             <Link
-              href="mailto:hello@example.com"
+              href="mailto:ahmadlazim422@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="h-5 w-5" />

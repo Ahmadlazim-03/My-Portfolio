@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useRef, useState } from "react"
 import { motion, useInView } from "framer-motion"
 import { Button } from "../components/ui/button"
@@ -9,22 +8,41 @@ import { Input } from "../components/ui/input"
 import { Textarea } from "../components/ui/textarea"
 import { Card, CardContent } from "../components/ui/card"
 import { Mail, MapPin, Phone, Send } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
 export default function Contact() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError(null)
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSubmitted(true)
-    }, 1500)
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          "service_7yzw8bg", // Replace with your EmailJS Service ID
+          "template_bd5ukge", // Replace with your EmailJS Template ID
+          formRef.current,
+          "WVAQjK0ITum1fQ8H4" // Replace with your EmailJS User ID
+        )
+        .then(
+          (result) => {
+            setIsSubmitting(false)
+            setIsSubmitted(true)
+          },
+          (error) => {
+            setIsSubmitting(false)
+            setError("Failed to send message. Please try again later.")
+            console.error("EmailJS error:", error)
+          }
+        )
+    }
   }
 
   return (
@@ -199,12 +217,22 @@ export default function Contact() {
                   </motion.div>
                 ) : (
                   <motion.form
+                    ref={formRef}
                     onSubmit={handleSubmit}
                     className="space-y-6"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
+                    {error && (
+                      <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="text-red-500 text-sm"
+                      >
+                        {error}
+                      </motion.p>
+                    )}
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
@@ -218,7 +246,7 @@ export default function Contact() {
                         >
                           Name
                         </label>
-                        <Input id="name" placeholder="Your Name" required />
+                        <Input id="name" name="name" placeholder="Your Name" required />
                       </div>
                       <div className="space-y-2">
                         <label
@@ -227,7 +255,7 @@ export default function Contact() {
                         >
                           Email
                         </label>
-                        <Input id="email" type="email" placeholder="Your Email" required />
+                        <Input id="email" name="email" type="email" placeholder="Your Email" required />
                       </div>
                     </motion.div>
                     <motion.div
@@ -242,7 +270,7 @@ export default function Contact() {
                       >
                         Subject
                       </label>
-                      <Input id="subject" placeholder="How can I help you ?" required />
+                      <Input id="subject" name="subject" placeholder="How can I help you ?" required />
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
@@ -256,7 +284,7 @@ export default function Contact() {
                       >
                         Message
                       </label>
-                      <Textarea id="message" placeholder="Your message here" className="min-h-32" required />
+                      <Textarea id="message" name="message" placeholder="Your message here" className="min-h-32" required />
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}

@@ -12,28 +12,28 @@ const projects = [
   {
     title: "Go Explore App",
     description:
-      "A full-featured e-commerce platform with product listings, cart functionality, user authentication, and payment processing.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "Stripe"],
+      "Application for booking tickets to destinations in Surabaya.",
+    image: "/GoExplore.png",
+    tags: ["laravel", "PHP", "Tailwind CSS", "My SQL", "Java Script"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Ahmadlazim-03/GoExplore-App",
   },
   {
     title: "Go Orbit App",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "A website for an institution providing and organizing programs for developing Human Resources personnel.",
+    image: "/GoOrbit.png",
+    tags: ["Cromwell", "TypeScript", "Maria DB", "VPS", "Nginx"],
+    liveUrl: "https://new.go-orbit.id/",
+    githubUrl: "https://github.com/Go-Orbit-Projects-by-EVOP-Tech/orbit-cromwell",
   },
   {
-    title: "Personal Blog",
-    description: "A content-focused blog with a custom CMS, markdown support, and optimized for performance and SEO.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["Next.js", "MDX", "Tailwind CSS", "Vercel"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "BFS & DFS AI Aplication",
+    description: "An artificial intelligence application that implements search methods.",
+    image: "/AI.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Python" , "Java Script"],
+    liveUrl: "https://project-maze-solver-ai.vercel.app/",
+    githubUrl: "https://github.com/Ahmadlazim-03/Project-Maze-Solver-AI",
   },
 ]
 
@@ -166,7 +166,7 @@ export default function Projects() {
           className="flex justify-center mt-12"
         >
           <Button variant="outline" size="lg">
-            <Link href="#">View All Projects</Link>
+            <Link href="https://github.com/Ahmadlazim-03?tab=repositories">View All Projects</Link>
           </Button>
         </motion.div>
       </div>

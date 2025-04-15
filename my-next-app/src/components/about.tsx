@@ -1,7 +1,7 @@
 "use client"
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import { useRef, useState } from "react"
+import { motion, useInView, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { Button } from "../components/ui/button"
 import { FileText } from "lucide-react"
@@ -9,6 +9,19 @@ import { FileText } from "lucide-react"
 export default function About() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [isPopupOpen, setIsPopupOpen] = useState(false) // State for popup
+
+  // Popup animation variants
+  const popupVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 0.8 },
+  }
+
+  const backdropVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
 
   return (
     <section id="about" ref={ref} className="py-20 md:py-32 bg-muted/30">
@@ -91,7 +104,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <Button className="mt-4">
+              <Button className="mt-4" onClick={() => setIsPopupOpen(true)}>
                 <FileText className="mr-2 h-4 w-4" /> Download Resume
               </Button>
             </motion.div>
@@ -111,7 +124,7 @@ export default function About() {
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-purple-500/20 blur-xl" />
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src="/evop.jpg"
                 alt="About me"
                 width={800}
                 height={600}
@@ -120,6 +133,42 @@ export default function About() {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Popup Modal */}
+        <AnimatePresence>
+          {isPopupOpen && (
+            <>
+              <motion.div
+                variants={backdropVariants}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                className="fixed inset-0 bg-black/50 z-50"
+                onClick={() => setIsPopupOpen(false)}
+              />
+              <motion.div
+                variants={popupVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-gradient-to-br from-background to-primary/10 p-8 rounded-2xl shadow-2xl max-w-sm w-full border border-primary/20"
+              >
+                <div className="flex flex-col items-center gap-4">
+                  <h3 className="text-xl font-semibold text-foreground">Feature Not Yet Available</h3>
+                  <p className="text-sm text-foreground/80 text-center">
+                    Coming Soon !
+                  </p>
+                  <Button
+                    onClick={() => setIsPopupOpen(false)}
+                    className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground"
+                  >
+                    Got It
+                  </Button>
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   )
